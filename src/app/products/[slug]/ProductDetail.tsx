@@ -111,7 +111,7 @@ export default function ProductDetail({ product }: { product: Product }) {
                   Enquire Now
                 </Link>
                 <a
-                  href="https://wa.me/919876543210"
+                  href="https://wa.me/919050093007"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-fresh-green/30 px-8 py-3.5 text-sm font-semibold text-fresh-green-dark transition-all hover:bg-fresh-green/5 hover:border-fresh-green/50 hover:scale-105"

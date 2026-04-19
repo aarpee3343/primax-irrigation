@@ -201,7 +201,7 @@ export default function HomePage() {
 
             <AnimatedSection direction="right" delay={0.2}>
               <span className="inline-block rounded-full bg-fresh-green/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-fresh-green-dark">
-                About Primax
+                About Primex
               </span>
               <h2 className="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-navy sm:text-4xl">
                 Engineering a{" "}
@@ -209,7 +209,7 @@ export default function HomePage() {
                 for Indian agriculture
               </h2>
               <p className="mt-5 text-lg leading-relaxed text-navy/60">
-                Since 2010, Primax Irrigation has been at the forefront of
+                Since 2010, Primex Irrigation has been at the forefront of
                 India&apos;s micro-irrigation revolution. We design, manufacture,
                 and distribute world-class drip and sprinkler systems that
                 help farmers grow more with less water.

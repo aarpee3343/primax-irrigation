@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, Phone, Mail, ArrowUpRight, Globe } from "lucide-react";
+import { MapPin, Phone, Mail, ArrowUpRight } from "lucide-react";
 import MadeInIndiaBadge from "./MadeInIndiaBadge";
 
 const footerLinks = {
@@ -36,7 +36,15 @@ function FacebookIcon({ className }: { className?: string }) {
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
       <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
       <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
       <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
@@ -62,7 +70,6 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="bg-navy text-gray-400">
-      {/* CTA Band */}
       <div className="bg-gradient-to-r from-navy via-bright-blue-dark to-fresh-green-dark">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 px-6 py-12 sm:flex-row lg:px-8">
           <div>
@@ -84,21 +91,23 @@ export default function Footer() {
 
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-5">
-          {/* Brand */}
           <div className="col-span-2">
             <Link href="/" className="inline-block">
               <Image
                 src="/logo.png"
-                alt="Primax Irrigation Logo"
+                alt="Primex Irrigation Logo"
                 width={160}
                 height={48}
                 className="h-12 w-auto object-contain brightness-0 invert"
               />
             </Link>
-            <p className="mt-5 max-w-xs text-sm leading-relaxed text-gray-400">
+            <p className="mt-5 max-w-sm text-sm leading-relaxed text-gray-400">
               Empowering Indian farmers with precision micro-irrigation
-              technology since 2010. Saving water, boosting yields, and building
-              a sustainable agricultural future.
+              solutions that save water, improve yields, and support a more
+              sustainable agricultural future.
+            </p>
+            <p className="mt-3 text-xs font-medium tracking-wide text-gray-500">
+              CIN: U29255HR2021PTC097841
             </p>
 
             <div className="mt-6 flex gap-3">
@@ -114,11 +123,9 @@ export default function Footer() {
               ))}
             </div>
 
-            {/* Made in India Badge */}
             <MadeInIndiaBadge className="mt-6" />
           </div>
 
-          {/* Link columns */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
               <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
@@ -140,32 +147,31 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Contact bar */}
-        <div className="mt-12 flex flex-wrap gap-6 border-t border-navy-light pt-8 text-sm">
-          <span className="inline-flex items-center gap-2">
-            <MapPin className="h-4 w-4 text-fresh-green" />
-            Pune, Maharashtra, India
+        <div className="mt-12 flex flex-col gap-4 border-t border-navy-light pt-8 text-sm sm:flex-row sm:flex-wrap sm:gap-6">
+          <span className="inline-flex max-w-3xl items-start gap-2 leading-relaxed">
+            <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-fresh-green" />
+            Khewat No-18, Near Serla Bus Stand, Vpo Serla, Tehsil Behal,
+            Bhiwani, Haryana, India - 127028
           </span>
           <a
-            href="tel:+919876543210"
-            className="inline-flex items-center gap-2 hover:text-bright-blue transition-colors"
+            href="tel:+919050093007"
+            className="inline-flex items-center gap-2 transition-colors hover:text-bright-blue"
           >
             <Phone className="h-4 w-4 text-bright-blue" />
-            +91 98765 43210
+            +91 90500 93007
           </a>
           <a
-            href="mailto:info@primaxirrigation.com"
-            className="inline-flex items-center gap-2 hover:text-bright-blue transition-colors"
+            href="mailto:primexirrigation@gmail.com"
+            className="inline-flex items-center gap-2 transition-colors hover:text-bright-blue"
           >
             <Mail className="h-4 w-4 text-bright-blue" />
-            info@primaxirrigation.com
+            primexirrigation@gmail.com
           </a>
         </div>
 
-        {/* Bottom bar */}
         <div className="mt-8 border-t border-navy-light pt-8 text-center text-xs text-gray-500">
-          © {new Date().getFullYear()} Primax Irrigation Pvt. Ltd. All rights
-          reserved.
+          Copyright {new Date().getFullYear()} Primex Irrigation Pvt. Ltd. All
+          rights reserved.
         </div>
       </div>
     </footer>
