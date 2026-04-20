@@ -5,21 +5,9 @@ import { motion } from "framer-motion";
 import {
   Target,
   Eye,
-  Heart,
-  Award,
   CheckCircle2,
-  Sprout,
-  Droplets,
-  Users,
 } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
-
-const stats = [
-  { label: "States Present", value: "12+", icon: Target },
-  { label: "Farmers Empowered", value: "10k+", icon: Users },
-  { label: "Water Saved (L)", value: "500Cr", icon: Droplets },
-  { label: "ISI Certified Products", value: "100%", icon: Award },
-];
 
 const timeline = [
   { year: "2010", title: "Foundation", desc: "Primex was founded with a vision to revolutionize micro-irrigation in Pune." },

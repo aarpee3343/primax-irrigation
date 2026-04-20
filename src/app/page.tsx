@@ -4,25 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import {
-  Droplets,
   Sprout,
-  Sun,
-  Shield,
-  TrendingUp,
-  Users,
   ArrowRight,
   ChevronRight,
-  Star,
-  Quote,
-  Zap,
-  Award,
-  Leaf,
-  Target,
 } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import CountUp from "@/components/CountUp";
-import { products } from "@/data/products";
-import { testimonials } from "@/data/testimonials";
 
 const heroStats = [
   { value: 50, suffix: "%", label: "Water Saved" },
@@ -30,49 +17,7 @@ const heroStats = [
   { value: 15, suffix: "+", label: "Years Experience" },
 ];
 
-const whyChoose = [
-  {
-    icon: Shield,
-    title: "Certified Quality",
-    desc: "ISI-marked products tested for Indian conditions. Every component meets rigorous quality standards.",
-  },
-  {
-    icon: Users,
-    title: "Expert Support",
-    desc: "On-field installation guidance and after-sales support from experienced agri-engineers.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Higher Yields",
-    desc: "Precision water delivery to root zones increases crop yield by 30-50% across all crop types.",
-  },
-  {
-    icon: Zap,
-    title: "Easy Installation",
-    desc: "Designed for plug-and-play simplicity. No special tools needed for most assemblies.",
-  },
-  {
-    icon: Award,
-    title: "Government Subsidy",
-    desc: "Our products qualify for PMKSY and state-level micro-irrigation subsidies up to 55%.",
-  },
-  {
-    icon: Leaf,
-    title: "Eco-Friendly",
-    desc: "Reduce water waste, lower carbon footprint, and promote sustainable farming practices.",
-  },
-];
-
-const impactStats = [
-  { value: 50000, suffix: "+", label: "Acres Irrigated", icon: Target },
-  { value: 10000, suffix: "+", label: "Happy Farmers", icon: Users },
-  { value: 500, suffix: " Cr L", label: "Water Saved", icon: Droplets },
-  { value: 12, suffix: "+", label: "States Covered", icon: Sun },
-];
-
 export default function HomePage() {
-  const featuredProducts = products.slice(0, 4);
-
   return (
     <>
       {/* ============ HERO ============ */}

@@ -4,7 +4,6 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
-import AnimatedSection from "@/components/AnimatedSection";
 
 const galleryImages = [
   { src: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80", caption: "Drip irrigation on grape vineyard — Nashik, Maharashtra", category: "Drip" },

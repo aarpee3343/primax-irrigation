@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { Calendar, Clock, ArrowRight, User } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
