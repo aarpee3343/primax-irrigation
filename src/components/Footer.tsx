@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, Phone, Mail, ArrowUpRight, Globe } from "lucide-react";
+import { MapPin, Phone, Mail, ArrowUpRight } from "lucide-react";
 import MadeInIndiaBadge from "./MadeInIndiaBadge";
 
 const footerLinks = {
