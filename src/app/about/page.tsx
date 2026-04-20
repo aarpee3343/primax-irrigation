@@ -5,12 +5,24 @@ import { motion } from "framer-motion";
 import {
   Target,
   Eye,
+  Heart,
+  Award,
   CheckCircle2,
+  Sprout,
+  Droplets,
+  Users,
 } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 
+const stats = [
+  { label: "States Present", value: "12+", icon: Target },
+  { label: "Farmers Empowered", value: "10k+", icon: Users },
+  { label: "Water Saved (L)", value: "500Cr", icon: Droplets },
+  { label: "ISI Certified Products", value: "100%", icon: Award },
+];
+
 const timeline = [
-  { year: "2010", title: "Foundation", desc: "Primex was founded with a vision to revolutionize micro-irrigation in Pune." },
+  { year: "2010", title: "Foundation", desc: "Primax was founded with a vision to revolutionize micro-irrigation in Pune." },
   { year: "2014", title: "ISI Certification", desc: "Received national quality certifications for our HDPE and drip products." },
   { year: "2018", title: "National Expansion", desc: "Expanded operations to 5 major agricultural states in India." },
   { year: "2023", title: "Innovation Hub", desc: "Launched our smart-irrigation division focusing on IoT and sensor-based systems." },
@@ -37,7 +49,7 @@ export default function AboutPage() {
               Rooted in <span className="gradient-text">Innovation</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-navy/60">
-              Primex Irrigation is dedicated to empowering Indian farmers through
+              Primax Irrigation is dedicated to empowering Indian farmers through
               sustainable, high-efficiency water management solutions.
             </p>
           </motion.div>
