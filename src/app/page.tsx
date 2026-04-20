@@ -23,6 +23,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import CountUp from "@/components/CountUp";
 import { products } from "@/data/products";
 import { testimonials } from "@/data/testimonials";
+import { company } from "@/lib/company";
 
 const heroStats = [
   { value: 50, suffix: "%", label: "Water Saved" },
@@ -201,7 +202,7 @@ export default function HomePage() {
 
             <AnimatedSection direction="right" delay={0.2}>
               <span className="inline-block rounded-full bg-fresh-green/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-fresh-green-dark">
-                About Primax
+                About PRIMEX
               </span>
               <h2 className="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-navy sm:text-4xl">
                 Engineering a{" "}
@@ -209,7 +210,7 @@ export default function HomePage() {
                 for Indian agriculture
               </h2>
               <p className="mt-5 text-lg leading-relaxed text-navy/60">
-                Since 2010, Primax Irrigation has been at the forefront of
+                Since 2010, PRIMEX Irrigation has been at the forefront of
                 India&apos;s micro-irrigation revolution. We design, manufacture,
                 and distribute world-class drip and sprinkler systems that
                 help farmers grow more with less water.
@@ -301,10 +302,10 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center">
             <span className="inline-block rounded-full bg-fresh-green/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-fresh-green-dark">
-              Why Primax
+              Why PRIMEX
             </span>
             <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
-              The Primax{" "}
+              The PRIMEX{" "}
               <span className="gradient-text">advantage</span>
             </h2>
           </AnimatedSection>
@@ -446,7 +447,7 @@ export default function HomePage() {
                     Get Free Consultation <ArrowRight className="h-4 w-4" />
                   </Link>
                   <a
-                    href="https://wa.me/919876543210"
+                    href={company.whatsappHref}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/20 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-white/10 hover:border-white/40 hover:scale-105 active:scale-100"

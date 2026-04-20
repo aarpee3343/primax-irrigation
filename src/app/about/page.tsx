@@ -39,7 +39,7 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2010", title: "Founded", desc: "Started operations in Pune with a vision to make precision irrigation accessible to every Indian farmer." },
+  { year: "2010", title: "Founded", desc: "Started operations with a vision to make precision irrigation accessible to every Indian farmer." },
   { year: "2014", title: "ISI Certification", desc: "Achieved ISI certification for our complete HDPE pipe and drip irrigation product range." },
   { year: "2017", title: "10,000 Acres", desc: "Crossed 10,000 acres of irrigated farmland across Maharashtra and Karnataka." },
   { year: "2020", title: "Pan-India Presence", desc: "Expanded dealer network to 12+ states, becoming a trusted name in Indian micro-irrigation." },
@@ -70,7 +70,7 @@ export default function AboutPage() {
               <span className="gradient-text">Driven by Innovation.</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-navy/60">
-              For over 15 years, Primax Irrigation has been engineering
+              For over 15 years, PRIMEX Irrigation has been engineering
               precision water management solutions that help Indian farmers
               thrive — sustainably.
             </p>
@@ -107,9 +107,9 @@ export default function AboutPage() {
                 From a small workshop to India&apos;s trusted irrigation partner
               </h2>
               <p className="mt-5 text-navy/60 leading-relaxed">
-                Primax Irrigation was born from a simple observation: Indian
+                PRIMEX Irrigation was born from a simple observation: Indian
                 farmers were losing up to 60% of their irrigation water to
-                inefficient flood methods. Founded in 2010 in Pune, we set out
+                inefficient flood methods. Founded in 2010, we set out
                 to make world-class micro-irrigation accessible, affordable, and
                 reliable for every farm size.
               </p>

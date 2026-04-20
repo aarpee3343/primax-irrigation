@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { MapPin, Phone, Mail, ArrowUpRight } from "lucide-react";
 import MadeInIndiaBadge from "./MadeInIndiaBadge";
+import { company } from "@/lib/company";
 
 const footerLinks = {
   Company: [
@@ -36,7 +37,15 @@ function FacebookIcon({ className }: { className?: string }) {
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
       <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
       <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
       <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
@@ -62,7 +71,6 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="bg-navy text-gray-400">
-      {/* CTA Band */}
       <div className="bg-gradient-to-r from-navy via-bright-blue-dark to-fresh-green-dark">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 px-6 py-12 sm:flex-row lg:px-8">
           <div>
@@ -84,22 +92,31 @@ export default function Footer() {
 
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-5">
-          {/* Brand */}
           <div className="col-span-2">
-            <Link href="/" className="inline-block">
+            <Link
+              href="/"
+              className="inline-flex rounded-2xl bg-white px-4 py-3 shadow-lg shadow-black/10"
+            >
               <Image
                 src="/logo.png"
-                alt="Primax Irrigation Logo"
-                width={160}
-                height={48}
-                className="h-12 w-auto object-contain brightness-0 invert"
+                alt={`${company.brandName} logo`}
+                width={280}
+                height={113}
+                className="h-12 w-auto object-contain sm:h-14"
+                sizes="(max-width: 640px) 200px, 240px"
+                unoptimized
               />
             </Link>
-            <p className="mt-5 max-w-xs text-sm leading-relaxed text-gray-400">
-              Empowering Indian farmers with precision micro-irrigation
-              technology since 2010. Saving water, boosting yields, and building
-              a sustainable agricultural future.
+            <p className="mt-5 max-w-sm text-sm leading-relaxed text-gray-400">
+              {company.legalName} empowers Indian farmers with precision
+              micro-irrigation technology that saves water, boosts yields, and
+              supports more sustainable agriculture.
             </p>
+            <div className="mt-4 space-y-1 text-xs leading-relaxed text-gray-500">
+              <p>{company.legalName}</p>
+              <p>CIN: {company.cin}</p>
+              <p>{company.registeredAddress}</p>
+            </div>
 
             <div className="mt-6 flex gap-3">
               {socialLinks.map(({ Icon, label, href }) => (
@@ -114,11 +131,9 @@ export default function Footer() {
               ))}
             </div>
 
-            {/* Made in India Badge */}
             <MadeInIndiaBadge className="mt-6" />
           </div>
 
-          {/* Link columns */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
               <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
@@ -140,32 +155,40 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Contact bar */}
-        <div className="mt-12 flex flex-wrap gap-6 border-t border-navy-light pt-8 text-sm">
-          <span className="inline-flex items-center gap-2">
-            <MapPin className="h-4 w-4 text-fresh-green" />
-            Pune, Maharashtra, India
-          </span>
+        <div className="mt-12 grid gap-4 border-t border-navy-light pt-8 text-sm md:grid-cols-3">
+          <div className="inline-flex items-start gap-2">
+            <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-fresh-green" />
+            <span>{company.registeredAddress}</span>
+          </div>
           <a
-            href="tel:+919876543210"
-            className="inline-flex items-center gap-2 hover:text-bright-blue transition-colors"
+            href={company.phoneHref}
+            className="inline-flex items-center gap-2 transition-colors hover:text-bright-blue"
           >
             <Phone className="h-4 w-4 text-bright-blue" />
-            +91 98765 43210
+            {company.phoneDisplay}
           </a>
           <a
-            href="mailto:info@primaxirrigation.com"
-            className="inline-flex items-center gap-2 hover:text-bright-blue transition-colors"
+            href={`mailto:${company.email}`}
+            className="inline-flex items-center gap-2 transition-colors hover:text-bright-blue"
           >
             <Mail className="h-4 w-4 text-bright-blue" />
-            info@primaxirrigation.com
+            {company.email}
           </a>
         </div>
 
-        {/* Bottom bar */}
         <div className="mt-8 border-t border-navy-light pt-8 text-center text-xs text-gray-500">
-          © {new Date().getFullYear()} Primax Irrigation Pvt. Ltd. All rights
-          reserved.
+          <p>
+            Copyright {new Date().getFullYear()} {company.legalName}. All rights
+            reserved.
+          </p>
+          <a
+            href="https://wa.me/919457590000"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 inline-flex items-center text-sm font-medium text-bright-blue-light transition-colors hover:text-white"
+          >
+            Made with love from Rakesh Poonia
+          </a>
         </div>
       </div>
     </footer>

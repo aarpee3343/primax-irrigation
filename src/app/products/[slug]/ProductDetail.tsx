@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Product, products } from "@/data/products";
+import { company } from "@/lib/company";
 
 export default function ProductDetail({ product }: { product: Product }) {
   const related = products
@@ -111,7 +112,7 @@ export default function ProductDetail({ product }: { product: Product }) {
                   Enquire Now
                 </Link>
                 <a
-                  href="https://wa.me/919050093007"
+                  href={company.whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-fresh-green/30 px-8 py-3.5 text-sm font-semibold text-fresh-green-dark transition-all hover:bg-fresh-green/5 hover:border-fresh-green/50 hover:scale-105"

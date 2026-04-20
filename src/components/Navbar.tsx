@@ -6,6 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { company } from "@/lib/company";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -27,10 +28,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
-
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -41,13 +38,15 @@ export default function Navbar() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
+        <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
           <Image
             src="/logo.png"
-            alt="Primax Irrigation Logo"
-            width={160}
-            height={48}
-            className="h-10 w-auto sm:h-12 object-contain"
+            alt={`${company.brandName} logo`}
+            width={280}
+            height={113}
+            className="h-11 w-auto object-contain sm:h-14"
+            sizes="(max-width: 640px) 180px, 240px"
+            unoptimized
             priority
           />
         </Link>
@@ -109,6 +108,7 @@ export default function Navbar() {
                   <Link
                     key={l.href}
                     href={l.href}
+                    onClick={() => setOpen(false)}
                     className={`block rounded-lg px-4 py-3 text-base font-medium transition-colors ${
                       isActive
                         ? "bg-sky/50 text-bright-blue"
@@ -121,6 +121,7 @@ export default function Navbar() {
               })}
               <Link
                 href="/contact"
+                onClick={() => setOpen(false)}
                 className="mt-3 block rounded-full bg-gradient-to-r from-bright-blue to-fresh-green px-5 py-3.5 text-center text-base font-semibold text-white shadow-lg shadow-bright-blue/20"
               >
                 Get Quote

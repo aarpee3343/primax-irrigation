@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { company } from "@/lib/company";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -10,13 +11,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Primax Irrigation Pvt. Ltd. — Save Water. Grow More.",
+  title: `${company.legalName} | Save Water. Grow More.`,
   description:
-    "India's trusted micro-irrigation company. Premium drip irrigation, sprinkler systems, HDPE pipes, and fittings for modern, water-efficient farming.",
+    "PRIMEX IRRIGATION PRIVATE LIMITED provides premium drip irrigation, sprinkler systems, HDPE pipes, and fittings for modern, water-efficient farming.",
   keywords:
     "drip irrigation, sprinkler system, HDPE pipes, micro irrigation, farming, agriculture, water saving",
   openGraph: {
-    title: "Primax Irrigation Pvt. Ltd.",
+    title: company.legalName,
     description: "Save Water. Grow More. Premium micro-irrigation solutions.",
     type: "website",
   },
