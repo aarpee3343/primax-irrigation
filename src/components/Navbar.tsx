@@ -44,7 +44,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-3 group">
           <Image
             src="/logo.png"
-            alt="Primex Irrigation Logo"
+            alt="Primax Irrigation Logo"
             width={160}
             height={48}
             className="h-10 w-auto sm:h-12 object-contain"
