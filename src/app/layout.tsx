@@ -10,13 +10,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Primex Irrigation Pvt. Ltd. - Save Water. Grow More.",
+  title: "Primax Irrigation Pvt. Ltd. — Save Water. Grow More.",
   description:
     "India's trusted micro-irrigation company. Premium drip irrigation, sprinkler systems, HDPE pipes, and fittings for modern, water-efficient farming.",
   keywords:
     "drip irrigation, sprinkler system, HDPE pipes, micro irrigation, farming, agriculture, water saving",
   openGraph: {
-    title: "Primex Irrigation Pvt. Ltd.",
+    title: "Primax Irrigation Pvt. Ltd.",
     description: "Save Water. Grow More. Premium micro-irrigation solutions.",
     type: "website",
   },
